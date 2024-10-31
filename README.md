@@ -12,4 +12,4 @@ This repository contains lab reports for various subjects as part of the college
 - **Lab Report 5**: [Depth First Search](https://github.com/ujeer/CollegeCodes/blob/main/Artifical%20Intelligence/DFS.py)
 - **Lab Report 6**: [Best First Search](https://github.com/ujeer/CollegeCodes/blob/main/Artifical%20Intelligence/BestFirstSearch.py)
 - **Lab Report 7**: [A* Searching Algorithm Implementation](https://github.com/ujeer/CollegeCodes/blob/main/Artifical%20Intelligence/A-star.py)
-- **Lab Report 8**: [Complete practical file along output](https://github.com/ujeer/CollegeCodes/blob/main/Artifical%20Intelligence/labreportofai.docx)
+- **Doc file**: [Complete practical file along output](https://github.com/ujeer/CollegeCodes/blob/main/Artifical%20Intelligence/labreportofai.docx)
