@@ -1,7 +1,6 @@
 # College Lab Reports Repository
 
-This repository contains lab reports for various subjects as part of the college curriculum. The lab reports cover topics such as Artifical intelligenc, Theory of Computation, Database Management system , Computer Network and Operating system 
-
+This repository contains lab reports for various subjects as part of the college curriculum. The lab reports cover topics such as Artifical intelligenc, Theory of Computation, 
 ## Subjects
 
 ### 1. Artificial Intelligence
