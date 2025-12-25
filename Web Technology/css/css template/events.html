@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Example</title>
+  <style>
+    #hoverBox {
+      width: 200px;
+      height: 100px;
+      background-color: lightblue;
+      text-align: center;
+      line-height: 100px;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body onload="pageLoaded()">
+
+  <h2>JavaScript Events Demo</h2>
+
+  <!-- onClick -->
+  <button onclick="showMessage()">Click Me (onclick)</button>
+  <p id="clickMsg"></p>
+
+  <!-- onMouseOver and onMouseOut -->
+  <div id="hoverBox" 
+       onmouseover="hoverEnter()" 
+       onmouseout="hoverLeave()">Hover over me</div>
+
+  <!-- onChange -->
+  <label for="color">Choose a color:</label>
+  <select id="color" onchange="colorChanged()">
+    <option value="">--Select--</option>
+    <option value="Red">Red</option>
+    <option value="Green">Green</option>
+    <option value="Blue">Blue</option>
+  </select>
+  <p id="colorResult"></p>
+
+  <!-- onKeyDown -->
+  <input type="text" placeholder="Type here" onkeydown="keyPressed(event)">
+  <p id="keyOutput"></p>
+
+  <script>
+    // onload
+    function pageLoaded() {
+      alert("Page has loaded successfully (onload)");
+    }
+
+    // onclick
+    function showMessage() {
+      document.getElementById("clickMsg").innerText = "Button was clicked!";
+    }
+
+    // onmouseover
+    function hoverEnter() {
+      document.getElementById("hoverBox").style.backgroundColor = "orange";
+      document.getElementById("hoverBox").innerText = "Mouse Over";
+    }
+
+    // onmouseout
+    function hoverLeave() {
+      document.getElementById("hoverBox").style.backgroundColor = "lightblue";
+      document.getElementById("hoverBox").innerText = "Hover over me";
+    }
+
+    // onchange
+    function colorChanged() {
+      let selectedColor = document.getElementById("color").value;
+      document.getElementById("colorResult").innerText = "You selected: " + selectedColor;
+    }
+
+    // onkeydown
+    function keyPressed(event) {
+      document.getElementById("keyOutput").innerText = "Key Pressed: " + event.key;
+    }
+  </script>
+
+</body>
+</html>

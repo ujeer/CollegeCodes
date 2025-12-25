@@ -1,0 +1,51 @@
+<!--check if the input number is prime of composite-->
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime or Composite Check</title>
+    
+    <script>
+        function checkPrimeOrComposite() {
+            // Get the value from the input field
+            let num = parseInt(document.getElementById("numberInput").value);
+            
+            // Check if input is a valid number and greater than 1
+            if (isNaN(num) || num <= 1) {
+                document.getElementById("result").innerHTML = "Please enter a valid number greater than 1.";
+                return;
+            }
+
+            // Flag to check if the number is prime
+            let isPrime = true;
+
+            // Check divisibility from 2 up to the square root of the number
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    isPrime = false;  // It is divisible, so it's not prime
+                    break;
+                }
+            }
+
+            // Display result based on the prime check
+            if (isPrime) {
+                document.getElementById("result").innerHTML = num + " is a prime number.";
+            } else {
+                document.getElementById("result").innerHTML = num + " is a composite number.";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Prime or Composite Check</h2>
+
+    <label for="numberInput">Enter a number: </label>
+    <input type="text" id="numberInput"><br><br>
+
+    <button onclick="checkPrimeOrComposite()">Check</button><br><br>
+    <div id="result"></div>
+
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+Write javascript program for the following
+a.find the greatest among three numbers
+b.print the fibonaci series:0,1,1,2,3,5,8,......15th terms
+c.print the series:8,9,64,25......10th terms
+d.In an input array of 10 numbers ,find their sum.
+e.Input two arrays considering first names and surnames in each array .print the full name 
+f.create avg()function that finds mean of three input arguments.then avg1() function calculate mean of fourvalues.Create avg()function that findsthe product of the two function 
+g.create a menu driven program simulating a calculator ,where we can input four choices for arthematics operation(add,subtract,multiplyand divide).input two numbers for the operartion
+h.check if the input number is prime of composite
+i.find the first 50 prime numbers
+j.here is the income tax rates of Internal revenue Department of Nepal.
+-less than 5,00,000--->1%tax(<6,00,000fot female and married individuas)
+-5,00,000 to 8,00,000 -->1%on upto 5,00,000 and 10% on extra on remaining (female and married condition apply for 1,00,000 added on minimum taxable amount)
+  -8,00,000 to 15,00,000 -->upto 5 lakh :1%,5 to 8 lakh :10%,8-15 lakh:20%(female and married condition apply as above)
+  -15,00,000 to 24,00,000 -->as per above for upto 15lakh ,30%for 15to24 lakh
+  -24,00,000 and above -->as per above upto 24 lakh,39%for remaning 
+  
+

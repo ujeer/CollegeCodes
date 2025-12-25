@@ -1,0 +1,14 @@
+body {
+  background-color: #e6f7ff;
+  font-family: 'Verdana';
+}
+
+h1 {
+  color: darkred;
+  text-align: center;
+}
+
+p {
+  color: navy;
+  font-size: 20px;
+}

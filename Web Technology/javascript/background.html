@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>JS DOM Manipulation</title>
+        <script>
+            function change(color) {
+                document.body.style.backgroundColor = color;
+            }
+
+            function txt() {
+                var a = prompt("Enter the color:");
+                document.body.style.color = a;
+            }
+
+            function imagechange(image) {
+              document.getElementById('a').innerHTML="<img src='a.jpg'>";
+            }
+        </script>
+    </head>
+    <body>
+        <img src="a.jpg" height="100px" onmouseover="imagechange('a.jpg')">
+        <p>Hello MBM 5th Section B</p>
+        <button onClick="change('red')">Red</button>
+        <button onClick="change('black')">Black</button>
+        <button onClick="change('yellow')">Yellow</button>
+        <button onClick="change('cyan')">Cyan</button>
+        <button onClick="change('blue')">Blue</button> <!-- Fixed invalid color -->
+        <button onClick="change('maroon')">Maroon</button>
+        <button onClick="change('reeju')">Reeju</button>
+        <button onClick="txt()">Change Text Color</button>
+    </body>
+</html>

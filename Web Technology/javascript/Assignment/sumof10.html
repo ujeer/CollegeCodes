@@ -1,0 +1,65 @@
+<!--In an input array of 10 numbers ,find their sum.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Numbers</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h2>Enter 10 Numbers to Find Their Sum</h2>
+        <form id="numberForm">
+            <div class="input-container">
+                <input type="text" id="num1" class="num-input" placeholder="Number 1"><br><br>
+                <input type="text" id="num2" class="num-input" placeholder="Number 2"><br><br>
+                <input type="text" id="num3" class="num-input" placeholder="Number 3"><br><br>
+                <input type="text" id="num4" class="num-input" placeholder="Number 4"><br><br>
+                <input type="text" id="num5" class="num-input" placeholder="Number 5"><br><br>
+                <input type="text" id="num6" class="num-input" placeholder="Number 6"><br><br>
+                <input type="text" id="num7" class="num-input" placeholder="Number 7"><br><br>
+                <input type="text" id="num8" class="num-input" placeholder="Number 8"><br><br>
+                <input type="text" id="num9" class="num-input" placeholder="Number 9"><br><br>
+                <input type="text" id="num10" class="num-input" placeholder="Number 10"><br><br>
+            </div>
+            <br>
+            <div class="button-container">
+            <button type="button" id="sumButton">Sum</button>
+            <span id="result" class="result"></span>
+        </form>
+        <div id="result" class="result"></div>
+    </div>
+
+    <script>
+
+        document.querySelectorAll('.num-input').forEach((input, index, inputs) => {
+            input.addEventListener('keydown', function(event) {
+                if (event.key === 'Enter') {
+                    // Move to the next input field if "Enter" is pressed
+                    if (inputs[index + 1]) {
+                        inputs[index + 1].focus();
+                    }
+                }
+            });
+        });
+
+        document.getElementById("sumButton").addEventListener("click", function() {
+            let numbers = [];
+            for (let i = 1; i <= 10; i++) {
+                let num = document.getElementById("num" + i).value;
+                if (num !== "") {
+                    numbers.push(Number(num));
+                }
+            }
+
+            if (numbers.length === 10) {
+                let sum = numbers.reduce((a, b) => a + b, 0);
+                document.getElementById("result").textContent = " " + sum;
+            } else {
+                document.getElementById("result").textContent = "Please enter all 10 numbers.";
+            }
+        });
+    </script>
+</body>
+</html>

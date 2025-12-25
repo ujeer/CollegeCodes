@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Basic effects of JQuery</title>
+        <style>
+            .main{
+                height:200px;
+                width:150px;
+                background-color: blue;
+                margin:0 auto;
+                display:block;
+
+
+        }
+        </style> 
+    </head>
+    <body>
+        <div class="main"></div><br>
+        <button id="hide">Hide</button>
+        <button id="show">Show</button>
+        <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+        <button id="sideup">Sideup</button>
+        <button id="sidedown">SideDown</button>
+       
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#hide').click(function(){
+                    $('.main').hide(1000);
+                });
+                $('#show').click(function(){
+                    $('.main').show(1000);
+                });
+                
+                $('#sideup').click(function(){
+                    $('.main').slideUp(150);
+                });
+                $('#sidedown').click(function(){
+                    $('.main').slideDown(200);
+                });
+                 $("#fadein").click(function() {
+            $(".main").fadeIn(200);
+                 });
+
+        $("#fadeout").click(function() {
+            $(".main").fadeOut(150);
+        });
+
+            });
+        </script>
+    </body>
+</html>

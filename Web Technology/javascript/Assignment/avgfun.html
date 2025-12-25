@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product of Averages</title>
+</head>
+<body>
+    <h2>Calculate the Product of Averages</h2>
+
+    <!-- Input fields for the 8 numbers -->
+    <label for="num1">Enter first number for avg(): </label>
+    <input type="text" id="num1" onkeydown="moveFocus(event, 'num2')"><br>
+
+    <label for="num2">Enter second number for avg(): </label>
+    <input type="text" id="num2" onkeydown="moveFocus(event, 'num3')"><br>
+
+    <label for="num3">Enter third number for avg(): </label>
+    <input type="text" id="num3" onkeydown="moveFocus(event, 'num4')"><br>
+
+    <label for="num4">Enter first number for avg1(): </label>
+    <input type="text" id="num4" onkeydown="moveFocus(event, 'num5')"><br>
+
+    <label for="num5">Enter second number for avg1(): </label>
+    <input type="text" id="num5" onkeydown="moveFocus(event, 'num6')"><br>
+
+    <label for="num6">Enter third number for avg1(): </label>
+    <input type="text" id="num6" onkeydown="moveFocus(event, 'num7')"><br>
+
+    <label for="num7">Enter fourth number for avg1(): </label>
+    <input type="text" id="num7" onkeydown="moveFocus(event, 'calculateButton')"><br>
+
+    <!-- Button to calculate the product of averages -->
+    <button id="calculateButton" onclick="calculateProduct()">Calculate Product of Averages</button><br><br>
+
+    <!-- Section to display individual averages and the product -->
+    <h3>Individual Averages:</h3>
+    <div id="average1"></div>
+    <div id="average2"></div>
+
+    <h3>Result (Product of Averages):</h3>
+    <div id="result"></div>
+
+    <script>
+        // Function to calculate the mean (average) of three numbers
+        function avg(num1, num2, num3) {
+            return (num1 + num2 + num3) / 3;
+        }
+
+        // Function to calculate the mean (average) of four numbers
+        function avg1(num1, num2, num3, num4) {
+            return (num1 + num2 + num3 + num4) / 4;
+        }
+
+        // Function to calculate the product of the two averages (avg() and avg1())
+        function calculateProduct() {
+            // Get input values (parse as floats)
+            let num1 = parseFloat(document.getElementById("num1").value);
+            let num2 = parseFloat(document.getElementById("num2").value);
+            let num3 = parseFloat(document.getElementById("num3").value);
+            let num4 = parseFloat(document.getElementById("num4").value);
+            let num5 = parseFloat(document.getElementById("num5").value);
+            let num6 = parseFloat(document.getElementById("num6").value);
+            let num7 = parseFloat(document.getElementById("num7").value);
+
+            // Validate inputs to ensure they are numbers
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4) || isNaN(num5) || isNaN(num6) || isNaN(num7)) {
+                document.getElementById("result").innerHTML = "Please enter valid numbers in all fields.";
+                return;
+            }
+
+            // Calculate individual averages
+            let average1 = avg(num1, num2, num3); // Mean of the first three numbers
+            let average2 = avg1(num4, num5, num6, num7); // Mean of the next four numbers
+
+            // Display individual averages
+            document.getElementById("average1").innerHTML = `Average 1 (avg()): ${average1}`;
+            document.getElementById("average2").innerHTML = `Average 2 (avg1()): ${average2}`;
+
+            // Calculate the product of averages
+            let product = average1 * average2;
+
+            // Display the result (product of averages)
+            document.getElementById("result").innerHTML = `Product of averages: ${product}`;
+        }
+
+        // Function to move focus to the next input or button when Enter key is pressed
+        function moveFocus(event, nextElementId) {
+            if (event.key === 'Enter') {
+                document.getElementById(nextElementId).focus();
+            }
+        }
+    </script>
+</body>
+</html>

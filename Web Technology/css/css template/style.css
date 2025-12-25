@@ -1,0 +1,43 @@
+*{
+    margin:auto;
+}
+.main {
+height:1200px;
+width:900px;
+background-color:blueviolet;
+}
+
+.header {
+    height:250px;
+    width:900px;
+    text-align:center;
+    background-color: blue;
+}
+.nav{
+    height:50px;
+    width:900px;
+    text-align:center;
+    background-color:rgb(156, 214, 227);
+}
+
+.footer{
+    height:200px;
+    width:900px;
+    text-align:center;
+    background-color:grey
+}
+
+.a {
+    height:200px;
+    width:700px;
+    text-align:center;
+    background-color: yellow;
+
+}
+.b {
+    height:200px;
+    width:700px;
+    text-align:center;
+    border:3px solid whitesmoke;
+    background-color: aquamarine;
+}

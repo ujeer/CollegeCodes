@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Plugins</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Common Styles */
+        body { font-family: Arial, sans-serif; padding: 20px; }
+
+        /* Slider */
+        .slider img { width: 300px; display: none; }
+        .slider img:first-child { display: block; }
+
+        /* Accordion */
+        .accordion-title {
+            background: #eee;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        .accordion-content {
+            display: none;
+            padding: 10px;
+            background: #f9f9f9;
+        }
+
+        /* Lightbox */
+        #lightbox {
+            display: none;
+            position: fixed;
+            top: 25%;
+            left: 30%;
+            width: 300px;
+            height: 200px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            z-index: 1000;
+        }
+
+        /* Zoom */
+        .zoom {
+            transition: transform 0.3s ease;
+        }
+        .zoom:hover {
+            transform: scale(1.2);
+        }
+
+        /* Toast */
+        #toast {
+            visibility: hidden;
+            min-width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            border-radius: 5px;
+        }
+        #toast.show {
+            visibility: visible;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @keyframes fadein {
+            from { bottom: 0; opacity: 0; }
+            to { bottom: 20px; opacity: 1; }
+        }
+        @keyframes fadeout {
+            from { bottom: 20px; opacity: 1; }
+            to { bottom: 0; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Slider -->
+    <h2>Slider</h2>
+    <div class="slider">
+     <img src="https://picsum.photos/id/1011/400/200" class="active">
+<img src="https://picsum.photos/id/1012/400/200">
+<img src="https://picsum.photos/id/1013/400/200">
+
+    </div>
+    <button id="nextSlide">Next Slide</button>
+
+    <hr>
+
+    <!-- Accordion -->
+    <h2>Accordion</h2>
+    <div class="accordion-title">Section 1</div>
+    <div class="accordion-content">Content of Section 1</div>
+    <div class="accordion-title">Section 2</div>
+    <div class="accordion-content">Content of Section 2</div>
+
+    <hr>
+
+    <!-- Lightbox -->
+    <h2>Lightbox</h2>
+    <img src="https://picsum.photos/id/1025/100/100" class="lightbox-thumb">
+
+    <div id="lightbox">
+        <p>Big Image or Content</p>
+        <button id="closeLightbox">Close</button>
+    </div>
+
+    <hr>
+
+    <!-- Zoom -->
+    <h2>Zoom on Hover</h2>
+   <img src="https://picsum.photos/id/1043/300/200" class="zoom-img">
+
+
+    <hr>
+
+    <!-- Toast -->
+    <h2>Toast Message</h2>
+    <button onclick="showToast()">Show Toast</button>
+    <div id="toast">This is a toast message!</div>
+
+    <!-- jQuery Logic -->
+    <script>
+        // Slider Plugin
+        let currentSlide = 0;
+        $("#nextSlide").click(function () {
+            let slides = $(".slider img");
+            slides.eq(currentSlide).hide();
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides.eq(currentSlide).fadeIn();
+        });
+
+        // Accordion Plugin
+        $(".accordion-title").click(function () {
+            $(this).next(".accordion-content").slideToggle();
+            $(".accordion-content").not($(this).next()).slideUp();
+        });
+
+        // Lightbox Plugin
+        $("#openLightbox").click(function () {
+            $("#lightbox").fadeIn();
+        });
+        $("#closeLightbox").click(function () {
+            $("#lightbox").fadeOut();
+        });
+
+        // Toast Plugin
+        function showToast() {
+            var toast = $("#toast");
+            toast.addClass("show");
+            setTimeout(() => toast.removeClass("show"), 3000);
+        }
+    </script>
+
+</body>
+</html>

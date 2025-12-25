@@ -1,0 +1,47 @@
+*{
+    margin:0px auto;
+    padding:0px;
+}
+
+div{
+    height:40px;
+    width:900px;
+    background-color:black;
+
+}
+div ul{
+list-style:none;
+}
+
+div li{
+    float:left;
+    position: relative;
+}
+div a{
+    color:white;
+    text-decoration: none;
+    line-height: 40px;
+    font-size:25px;
+    display:block;
+    width:150px;
+    text-align:center;
+    font-weight:bold;
+}
+
+div a:hover{
+    color:purple;
+    transition:2s;
+    font-size:35px;
+    border:2px dotted yellow;
+}
+
+div ul ul{
+position:absolute;
+visibility:hidden;
+}
+
+div ul li:hover ul{
+    visibility:visible;
+    background-color: aqua;
+}
+

@@ -1,0 +1,43 @@
+*{
+    margin:0px auto;
+    padding:0px;
+    background-color : grey;
+}
+.main{
+    height:400px;
+    width:800px;
+    /*background-color: red;*/
+    /*background image*/
+    background-image:url("a.jpg");
+    background-size: cover;
+    position:relative;
+    /*left:100px;
+    bottom:-100px;*/
+
+}
+
+.a{
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    border:5px solid white;
+    background-image: url("a.jpg");
+    background-size: cover;
+  
+    background-color: black;
+    position:absolute;
+    left:100px;
+    bottom:-100px;
+}
+.b{
+    width:200px;
+    height: 200px;
+    background-color: aqua;
+    border-radius:20%;
+    position:absolute;
+    bottom:-100px;
+    right:100px;
+    color:white;
+    overflow: auto;
+}
+  /*make triangle in css*/

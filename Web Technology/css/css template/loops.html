@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Loops in JavaScript</title>
+</head>
+<body>
+
+  <h2>JavaScript Loop Examples</h2>
+  <pre id="output"></pre>
+
+  <script>
+    let result = "";
+
+    // ✅ For Loop
+    result += "1. For Loop (1 to 5):\n";
+    for (let i = 1; i <= 5; i++) {
+      result += i + " ";
+    }
+    result += "\n\n";
+
+    // ✅ While Loop
+    result += "2. While Loop (1 to 5):\n";
+    let j = 1;
+    while (j <= 5) {
+      result += j + " ";
+      j++;
+    }
+    result += "\n\n";
+
+    // ✅ Do...While Loop
+    result += "3. Do...While Loop (1 to 5):\n";
+    let k = 1;
+    do {
+      result += k + " ";
+      k++;
+    } while (k <= 5);
+    result += "\n\n";
+
+    // ✅ Nested Loop (Multiplication Table)
+    result += "4. Nested Loop (Multiplication Table 1 to 3):\n";
+    for (let a = 1; a <= 3; a++) {
+      for (let b = 1; b <= 3; b++) {
+        result += `${a} x ${b} = ${a * b}\t`;
+      }
+      result += "\n";
+    }
+
+    document.getElementById("output").textContent = result;
+  </script>
+
+</body>
+</html>
