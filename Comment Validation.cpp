@@ -6,7 +6,7 @@ int main() {
     int len;
 
     printf("Enter a string:\n");
-    gets(a); 
+    fgets(a, sizeof(a), stdin); 
 
     // Check for single-line comment
     if (a[0] == '/' && a[1] == '/') {
