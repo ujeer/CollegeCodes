@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>setTimeout and setInterval Demo</title>
+  <style>
+    body {
+      font-family: Arial;
+    }
+    #intervalBox {
+      margin-top: 10px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript Timer Functions</h2>
+  <button onclick="showDelayedMessage()">Click for Delayed Message (setTimeout)</button>
+  <p id="timeoutMsg"></p>
+  <button onclick="startCounter()">Start Counter (setInterval)</button>
+  <button onclick="stopCounter()">Stop Counter</button>
+  <p id="intervalBox">Counter: 0</p>
+
+  <script>
+    function showDelayedMessage() {
+      document.getElementById("timeoutMsg").innerText = "Waiting 3 seconds...";
+      setTimeout(function () {
+        document.getElementById("timeoutMsg").innerText = "Hello after 3 seconds!";
+      }, 3000); 
+    }
+    let count = 0;
+    let intervalID;
+
+    function startCounter() {
+      intervalID = setInterval(function () {
+        count++;
+        document.getElementById("intervalBox").innerText = "Counter: " + count;
+      }, 1000); 
+    }
+
+    function stopCounter() {
+      clearInterval(intervalID);
+      document.getElementById("intervalBox").innerText += " (Stopped)";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js object time</title>
+    <script>
+        function abc(){
+            var d = new Date();
+            document.getElementById('date').innerHTML=d.toDateString();
+            document.getElementById('time').innerHTML=d.toLocaleTimeString();
+
+        }
+        setInterval("abc()",1000)
+    </script>
+</head>
+<body>
+    <body onload="abc()">
+    <p id="date"></p>
+    <p id="time"></p>
+    
+</body>
+</html>

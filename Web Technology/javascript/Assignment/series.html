@@ -1,0 +1,26 @@
+<!--print the series:8,9,64,25......10th terms -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Series</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let series = [];
+            for (let i = 2; series.length < 10; i++) {
+                if (series.length % 2 === 0) {
+                    series.push(i ** 3); // Cube of i
+                } else {
+                    series.push(i ** 2); // Square of i
+                }
+            }
+            document.getElementById('result').innerText = "Series:" + series.join(", ");
+        });
+    </script>
+</head>
+<body>
+    <h2>Series upto 10 Terms</h2>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Append</title>
+        <style>
+
+        </style>
+    </head>
+    <body>
+            <ul>
+                <li>Apple</li>
+                <li>Orange</li>
+                <li>Banana</li>
+            </ul>
+            <button id="append">Append</button>
+            <button id="prepend">Prepend</button>
+        <script src="jquery-3.7.1.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('#append').click(function(){
+                    $('ul').append('<li>kiwi<li>');
+                });
+                $('#prepend').click(function(){
+                    $('ul').prepend('<li>grapes<li>');
+                });
+            });
+        </script>
+    </body>
+</html>

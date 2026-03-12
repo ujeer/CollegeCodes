@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris 2024 Olympic Rings</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: white;
+    }
+
+    .rings {
+      position: relative;
+      width: 300px;
+      height: 150px;
+    }
+
+    .ring {
+      width: 90px;
+      height: 90px;
+      border: 8px solid black; /* Single color as requested */
+      border-radius: 50%;
+      position: absolute;
+      background-color: white;
+    }
+
+    /* Top row of rings */
+    .ring:nth-child(1) { left: 0; top: 0; }
+    .ring:nth-child(2) { left: 105px; top: 0; }
+    .ring:nth-child(3) { left: 210px; top: 0; }
+
+    /* Bottom row of rings (overlapping slightly) */
+    .ring:nth-child(4) { left: 52px; top: 50px; }
+    .ring:nth-child(5) { left: 157px; top: 50px; }
+
+  </style>
+</head>
+<body>
+
+  <div class="rings">
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+    <div class="ring"></div>
+  </div>
+
+</body>
+</html>

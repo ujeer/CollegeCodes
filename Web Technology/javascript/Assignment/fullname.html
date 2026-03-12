@@ -1,0 +1,44 @@
+<!--Input two arrays considering first names and surnames in each array .print the full name -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Names from Arrays</title>
+    <script>
+        function generateFullNames() {
+            // Input arrays: split the string values by commas and trim extra spaces
+            let firstNames = document.getElementById("firstNames").value.split(',').map(name => name.trim());
+            let lastNames = document.getElementById("lastNames").value.split(',').map(name => name.trim());
+
+            // Ensure both arrays have the same length
+            if (firstNames.length !== lastNames.length) {
+                document.getElementById("result").innerHTML = "Error: The number of first names and last names must match.";
+                return;
+            }
+
+            // Generate the full names by combining first and last names
+            let fullNames = [];
+            for (let i = 0; i < firstNames.length; i++) {
+                fullNames.push(firstNames[i] + " " + lastNames[i]);
+            }
+
+            // Display the full names
+            document.getElementById("result").innerHTML = fullNames.join('<br>');
+        }
+    </script>
+</head>
+<body>
+
+    <label for="firstNames">First Name:</label>
+    <input type="text" id="firstNames" placeholder=""><br><br>
+
+    <label for="lastNames">Surname:</label>
+    <input type="text" id="lastNames" placeholder=""><br><br>
+
+    <button type="button" onclick="generateFullNames()">Full Name</button><br>
+    <div id="result"></div>
+
+   
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <script>
+        function aaa(){
+            var d=new Date();
+            document.getElementById("hh").value=d.getHours();
+            document.getElementById("mm").value=d.getMinutes();
+            document.getElementById("ss").value=d.getSeconds();
+            document.getElementById("ms").value=d.getMilliseconds();
+        }
+        setInterval("aaa()",100)
+    </script>
+</head>
+<body>
+    <center>
+        <input type="text" size="2" id="hh">
+        <input type="text" size="2" id="mm">
+        <input type="text" size="2" id="ss">
+        <input type="text" size="2" id="ms">
+    </center>
+</body>
+</html>

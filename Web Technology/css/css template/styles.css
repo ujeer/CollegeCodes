@@ -1,0 +1,122 @@
+*{
+margin:0px auto;
+padding :0px;
+}
+.main{
+    height:1000px;
+    width:1000px;
+    background-color:grey;
+
+}
+.one{
+    height:300px;
+    width:1200px;
+    background-color:blue;
+}
+.two{
+    height:300px;
+    width:1200px;
+    background-color: white;
+
+}
+.a{
+    height:300px;
+    width:600px;
+    background-color: red;
+    float:left;
+}
+.b{
+    height:300px;
+    width:600px;
+    background-color: pink;
+    float:right;
+}
+.three{
+    height: 300px;
+    width:1200px;
+    background-color: antiquewhite;
+}
+.c{
+    height:300px;
+    width:400px;
+    background-color: aqua;
+    float:left;
+}
+.d{
+    height:300px;
+    width:400px;
+    background-color: yellow;
+    float:left;
+
+}
+.e{
+    height:300px;
+    width:400px;
+    background-color:green;
+    float:left;
+}
+.four{
+    height: 300px;
+    width:1200px;
+    background-color:yellowgreen;
+}
+.f{
+    height:300px;
+    width:300px;
+    background-color:purple;
+    float:left;
+}
+.g{
+    height:300px;
+    width:300px;
+    background-color:lavender;
+    float:left;
+
+}
+.h{
+    height:300px;
+    width:300px;
+    background-color:azure;
+    float:left;
+}
+.i{
+    height:300px;
+    width:300px;
+    background-color:skyblue;
+    float:left;
+}
+.five{
+    height:300px;
+    width:1200px;
+    background-color:darkgoldenrod;
+}
+.j{
+    height:300px;
+    width:240px;
+    background-color: brown;
+    float:left;
+}
+.k{
+    height:300px;
+    width:240px;
+    background-color:aquamarine;
+    float:left;
+}
+.l{
+    height:300px;
+    width:240px;
+    background-color:goldenrod;
+    float:left;
+}
+.m{
+    height:300px;
+    width:240px;
+    background-color:lavender;
+    float:left;
+}
+.n{
+    height:300px;
+    width:240px;
+    background-color:purple;
+    float:left;
+}

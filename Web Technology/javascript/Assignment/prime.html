@@ -1,0 +1,39 @@
+<!--find the first 50 prime numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First 50 Prime Numbers</title>
+</head>
+<body>
+    <h2>First 50 Prime Numbers</h2>
+    <div id="result"></div>
+
+    <script>
+        // Function to find and display first 50 prime numbers
+        function findPrimes() {
+            let primes = [];
+            let num = 2;
+            while (primes.length < 50) {
+                if (isPrime(num)) {
+                    primes.push(num);
+                }
+                num++;
+            }
+            document.getElementById("result").innerText = primes.join(", ");
+        }
+
+        // Function to check if a number is prime
+        function isPrime(n) {
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i === 0) return false;
+            }
+            return n > 1;
+        }
+
+        // Call the function immediately when the page loads
+        findPrimes();
+    </script>
+</body>
+</html>

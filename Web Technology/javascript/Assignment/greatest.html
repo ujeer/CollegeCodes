@@ -1,0 +1,32 @@
+<!--a.find the greatest among three numbers-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finding the greatest Number </title>
+    <script>
+         function findGreatest() {
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let num3 = parseFloat(document.getElementById('num3').value);
+            
+            if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+                document.getElementById('result').innerText = "Please enter valid numbers.";
+                return;
+            }
+            
+            let greatest = Math.max(num1, num2, num3);
+            document.getElementById('result').innerText = "Greatest number is: " + greatest;
+        }
+    </script>
+</head>
+<body>
+    <h2>Greatest Number Among three:<br></h2>
+    <label>Number 1: <input type="text" id="num1"></label><br><br>
+    <label>Number 2: <input type="text" id="num2"></label><br><br>
+    <label>Number 3: <input type="text" id="num3"></label><br><br>
+    <button onclick="findGreatest()">Find Greatest</button>
+    <p id="result"></p>
+</body>
+</html>
